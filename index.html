@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的第一个聊天App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <!-- 标题栏 -->
+        <header class="chat-header">
+            <h1><i class="fas fa-comments"></i> 简易聊天室</h1>
+            <div class="user-info">
+                用户ID: <span id="current-user">未登录</span>
+            </div>
+        </header>
+
+        <!-- 消息显示区域 -->
+        <div class="chat-messages" id="message-list">
+            <!-- 消息会动态插入到这里 -->
+            <div class="message system">欢迎来到聊天室！请先设置你的用户ID。</div>
+        </div>
+
+        <!-- 底部输入区域 -->
+        <div class="chat-input-area">
+            <div class="input-row">
+                <input type="text" id="user-id-input" placeholder="输入你的用户ID (如：user1)" value="user1">
+                <button id="login-btn"><i class="fas fa-sign-in-alt"></i> 登录</button>
+            </div>
+            <div class="input-row">
+                <input type="text" id="friend-id-input" placeholder="输入对方ID (如：user2)" value="user2">
+                <input type="text" id="message-input" placeholder="输入消息...">
+                <button id="send-btn"><i class="fas fa-paper-plane"></i> 发送</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入SDK和我们的逻辑代码 -->
+    <script src="./node_modules/tim-js-sdk/tim-js.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
